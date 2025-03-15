@@ -92,9 +92,10 @@ This architecture was chosen to:
 **API Information**
 The app fetches data from the following endpoint:
 Copyhttps://mobile-s3-test-assets.aws-sdlc-bonial.com/shelf.json
+
 **Unit Tests**
-Run the tests using:
-Copy./gradlew test
+* Run the tests using:
+* Copy./gradlew test
 
 **Future Improvements**
 
