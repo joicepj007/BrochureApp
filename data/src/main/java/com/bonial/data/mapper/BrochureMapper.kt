@@ -1,5 +1,8 @@
 package com.bonial.data.mapper
 
+import com.bonial.common.constants.AppConstants.BROCHURE
+import com.bonial.common.constants.AppConstants.BROCHURE_PREMIUM
+import com.bonial.common.constants.AppConstants.SUPER_BANNER_CAROUSEL
 import com.bonial.data.model.BrochureResponse
 import com.bonial.data.model.ContentItem
 import com.bonial.data.model.ContentPlacement
@@ -80,8 +83,8 @@ class BrochureMapper @Inject constructor() {
     }
 
     fun isBrochureContentType(contentType: String?): Boolean {
-        return contentType == "brochure" ||
-                contentType == "brochurePremium" ||
-                contentType == "superBannerCarousel"
+        return contentType == BROCHURE ||
+                contentType == BROCHURE_PREMIUM ||
+                contentType == SUPER_BANNER_CAROUSEL
     }
 }

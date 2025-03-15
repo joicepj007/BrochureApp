@@ -26,12 +26,3 @@ val BonialColors = object {
     val placeholderBackground = Color(0xFFE0E0E0)
     val placeholderIcon = Color(0xFF9E9E9E)
 }
-
-/**
- * Extension property to access Bonial specific colors through MaterialTheme
- */
-/*
-val MaterialTheme.bonialColors: BonialColors
-    @Composable
-    @ReadOnlyComposable
-    get() = BonialColors*/

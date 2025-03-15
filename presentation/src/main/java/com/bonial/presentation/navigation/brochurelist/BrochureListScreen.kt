@@ -5,6 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.bonial.common.constants.AppConstants.BROCHURE_PREMIUM
 import com.bonial.designsystem.components.cards.BrochureCard
 import com.bonial.designsystem.components.filters.FilterSwitch
 import com.bonial.designsystem.components.layouts.ResponsiveGrid
@@ -37,10 +38,10 @@ fun BrochureListScreen(
             ResponsiveGrid(
                 items = brochures,
                 isItemFullWidth = { brochure ->
-                    brochure.content.contentType == "brochurePremium"
+                    brochure.content.contentType == BROCHURE_PREMIUM
                 },
                 itemContent = { brochure, isFullWidth ->
-                    val isPremium = brochure.content.contentType == "brochurePremium"
+                    val isPremium = brochure.content.contentType == BROCHURE_PREMIUM
                     BrochureCard(
                         retailerName = brochure.retailer.name,
                         imageUrl = brochure.content.brochureImage?.url,

@@ -17,30 +17,12 @@ class BrochureRepositoryImpl @Inject constructor(
 
     override fun getBrochures(): Flow<Result<List<BrochureItem>>> = flow {
         try {
-            Log.d(TAG, "Fetching brochures from API")
             val result = remoteDataSource.getBrochures()
 
             if (result.isSuccess) {
                 // Get the response
                 val response = result.getOrThrow()
                 Log.d(TAG, "Successfully received API response")
-
-                // Detailed debugging about the response structure
-                response.embedded?.let { embedded ->
-                    Log.d(TAG, "Found ${embedded.contents.size} content placements")
-
-                    embedded.contents.forEachIndexed { index, placement ->
-                        Log.d(TAG, "Content placement $index: type=${placement.contentType}, placement=${placement.placement}")
-
-                        // Check content structure
-                        val content = placement.content
-                        when (content) {
-                            is List<*> -> Log.d(TAG, "Content is a list with ${content.size} items")
-                            is Map<*, *> -> Log.d(TAG, "Content is a direct object with ${content.size} keys")
-                            else -> Log.d(TAG, "Content is of unknown type: ${content?.javaClass?.simpleName}")
-                        }
-                    }
-                } ?: Log.d(TAG, "Embedded data is null")
 
                 // Map to domain model
                 val brochures = mapper.mapToDomainModel(response)
