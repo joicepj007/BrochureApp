@@ -52,10 +52,10 @@ This architecture was chosen to:
 
 **Testing**
 
-**JUnit:** Basic unit testing framework
-**Mockito:** Creates mock dependencies for isolated testing
-**Turbine:** Simplifies Flow testing
-**MockWebServer:** Tests network interactions
+* **JUnit:** Basic unit testing framework
+* **Mockito:** Creates mock dependencies for isolated testing
+* **Turbine:** Simplifies Flow testing
+* **MockWebServer:** Tests network interactions
 
 **Design Patterns**
 **Presentation Layer**
