@@ -2,7 +2,6 @@
 **Bonial Brochure App**
 **Overview**
 This application was developed as part of the Bonial Android Developer Code Challenge. It displays a collection of brochures from retailers, allowing users to browse through available offers in a responsive grid layout.
-Show Image
 
 **Features**
 
@@ -20,6 +19,7 @@ The application follows **MVVM with Clean Architecture** principles, organized i
 * **:data**: Implements repositories and data sources that interact with the API
 * **:presentation**: Houses UI components, ViewModels, and navigation
 * **:designsystem**: Maintains reusable UI components and design tokens
+* **:common:** Provides shared utilities, constants, and base components used across all modules
 
 This architecture was chosen to:
 
