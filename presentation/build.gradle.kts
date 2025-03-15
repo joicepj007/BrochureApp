@@ -40,6 +40,7 @@ dependencies {
 
     // Project modules
     implementation(project(":domain"))
+    implementation(project(":designsystem"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
