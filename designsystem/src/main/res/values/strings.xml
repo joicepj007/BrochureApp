@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="brochures">Bonial Brochures</string>
+    <string name="filter">Filter within 5km</string>
+    <string name="error_message">Error :</string>
+    <string name="retry">Retry</string>
+    <string name="no_brochures">No brochures found</string>
+    <string name="premium">Premium</string>
+</resources>
