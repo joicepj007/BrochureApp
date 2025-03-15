@@ -3,6 +3,7 @@ package com.bonial.data.mapper
 import com.bonial.common.constants.AppConstants.BROCHURE
 import com.bonial.common.constants.AppConstants.BROCHURE_PREMIUM
 import com.bonial.common.constants.AppConstants.SUPER_BANNER_CAROUSEL
+import com.bonial.common.constants.AppConstants.UNKNOWN_RETAILER
 import com.bonial.data.model.BrochureResponse
 import com.bonial.data.model.ContentItem
 import com.bonial.data.model.ContentPlacement
@@ -67,12 +68,12 @@ class BrochureMapper @Inject constructor() {
         // Determine image URL (different fields based on content type)
         val imageUrl = contentItem.brochureImage ?: contentItem.imageUrl
 
-        // Create the domain model
+        //domain model
         return BrochureItem(
             id = id,
             retailer = Retailer(
                 id = contentItem.publisher?.id ?: "",
-                name = contentItem.publisher?.name ?: "Unknown Retailer"
+                name = contentItem.publisher?.name ?: UNKNOWN_RETAILER
             ),
             content = Content(
                 contentType = contentType,

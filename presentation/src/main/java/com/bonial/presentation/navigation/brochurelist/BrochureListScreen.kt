@@ -12,7 +12,7 @@ import com.bonial.designsystem.components.layouts.ResponsiveGrid
 import com.bonial.designsystem.components.screens.StandardListScreen
 import com.bonial.presentation.R
 
-// Example of using ResponsiveGrid with StandardListScreen
+// ResponsiveGrid with StandardListScreen
 @Composable
 fun BrochureListScreen(
     viewModel: BrochureListViewModel = hiltViewModel()
