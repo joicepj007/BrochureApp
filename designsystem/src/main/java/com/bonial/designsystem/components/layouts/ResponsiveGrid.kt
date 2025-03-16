@@ -34,7 +34,7 @@ fun <T> ResponsiveGrid(
             key = { index -> items[index].hashCode() },
             span = { index ->
                 val item = items[index]
-                val isFullWidth = isItemFullWidth(item) && !isLandscape
+                val isFullWidth = isItemFullWidth(item)
                 val span = if (isFullWidth) columns else 1
                 GridItemSpan(span)
             }
