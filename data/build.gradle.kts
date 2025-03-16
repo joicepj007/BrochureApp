@@ -89,7 +89,9 @@ dependencies {
     // Other dependencies
     implementation(libs.io.coil.kt)
     implementation(libs.androidx.core)
-    testImplementation("io.mockk:mockk:1.13.8")
+    //testImplementation("io.mockk:mockk:1.13.8")
+    testImplementation(libs.mockk)
+
 
 
 }
